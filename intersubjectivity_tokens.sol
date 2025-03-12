@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract IntersubjectivityToken is ERC20 {
 
     // stakeholder roles 
-    enum Role { Miner, Validator, SubnetOwner };
+    enum Role { Miner, Validator, SubnetOwner }
 
     // stakeholder details
     struct Stakeholder {
@@ -21,7 +21,7 @@ contract IntersubjectivityToken is ERC20 {
     mapping(address => uint256) public userBalances;
 
     // timestamp for rebalancing
-    uint256 public lastRebalance
+    uint256 public lastRebalance;
 
     // rebalance interval: 21600 seconds
     uint256 public constant REBALANCE_INTERVAL = 21600;
