@@ -24,7 +24,7 @@ contract IntersubjectivityToken is ERC20 {
     uint256 public lastRebalance;
 
     // rebalance interval: 21600 seconds
-    uint256 public constant REBALANCE_INTERVAL = 21600;
+    // uint256 public constant REBALANCE_INTERVAL = 21600;
 
     // allocation percentages 
     // TODO: adjust
@@ -79,11 +79,11 @@ contract IntersubjectivityToken is ERC20 {
     }
 
     // rebalancing balances 
-    function rebalance() external {
-        require(block.timestamp >= lastRebalance + REBALANCE_INTERVAL, "rebalance not allowed");
-        _rebalance();
-        lastRebalance = block.timestamp;
-    }
+    // function rebalance() external {
+        // require(block.timestamp >= lastRebalance + REBALANCE_INTERVAL, "rebalance not allowed");
+        // _rebalance();
+        // lastRebalance = block.timestamp;
+    // }
 
     // internal to calculate and update token delegation
     function _rebalance() internal {
